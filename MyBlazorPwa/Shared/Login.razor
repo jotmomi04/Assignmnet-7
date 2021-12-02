@@ -1,0 +1,40 @@
+@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.JSInterop
+@using MyBlazorPwa
+@using MyBlazorPwa.Shared
+
+@inherits InputText
+@page "/account-login"
+ Microsoft.AspNetCore.Components.WebAssembly.Http
+<input @bind="Username" @bind:event="oninput" @onblur="Hide" autocomplete="off"
+       @attributes="@AdditionalAttributes" class="@CssClass" />
+<input @bind="Password" @bind:event="oninput" @onblur="Hide" autocomlplete="off" class = "@CssClass" />
+
+<button class="text-button" @onclick="OnLoginCallback"> 'Login'
+        </button>
+
+@code {
+    bool PasswordVisible;
+   string[] Username = Array.Empty<string>();
+ string[] Password = Array.Empty<string>();
+
+ 
+    [Parameter] public EventCallback OnLoginCallback { get; set; }
+
+    
+   
+
+    void Hide()
+    {
+        PasswordVisible = false;
+    }
+@code {
+   
+}
+   
+}

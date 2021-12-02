@@ -1,0 +1,15 @@
+{
+  "name": "MyBlazorPwa",
+  "short_name": "ManjotSingh",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFE4C4",
+  "theme_color": "#FF7F50",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
